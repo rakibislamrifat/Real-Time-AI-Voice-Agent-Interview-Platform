@@ -73,7 +73,7 @@ const AuthForm = ({type} : {type: "sign-in" | "sign-up"}) => {
             {!isSignIn && (
               <FormField control={form.control} name="name" label="Name" placeholder="Your Name" type="text" />)}
             
-            <FormField control={form.control} name="email" label="Email" placeholder="Your email adress" type="email" />
+            <FormField control={form.control} name="email" label="Email" placeholder="Your email address" type="email" />
                   
 
             <FormField control={form.control} name="password" label="Password" placeholder="Enter your password" type="password" />
