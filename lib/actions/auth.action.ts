@@ -3,7 +3,6 @@
 import { auth, db } from "@/firebase/admin";
 
 import { cookies } from "next/headers";
-import { use } from "react";
 
 interface SignUpParams {
   uid: string;
@@ -79,7 +78,7 @@ export async function setSessionCookie(idToken: string) {
     const sessionCookie = await auth.createSessionCookie(idToken, {
         expiresIn: 60 * 60 * 24 * 7 * 1000,
     })
-    cookieStore.set('lession', sessionCookie, {
+    cookieStore.set('session', sessionCookie, {
         maxAge: 60 * 60 * 24 * 7,
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
